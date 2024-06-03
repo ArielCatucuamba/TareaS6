@@ -18,4 +18,20 @@ class Figuras3D extends FigurasGeometricas{
         this.ncaras=ncaras;
         this.arista=arista;
     }
+
+    @Override
+    public void mostrar_datos() {
+        super.mostrar_datos();
+        System.out.println("Caras: "+ncaras);
+        System.out.println("Arista: "+arista);
+    }
+    public double calcular_volumen(double arista, int ncaras){
+        if(ncaras==6){
+            return Math.pow(arista, 3);
+        }
+        else {
+            System.out.println("Figura no reconocida o fórmula no definida.");
+            return 0;
+        }
+    }
 }
