@@ -10,4 +10,12 @@ class FigurasGeometricas {
         System.out.println("Nombres: "+nombres);
     }
 }
-
+class Figuras3D extends FigurasGeometricas{
+    public int ncaras;
+    public double arista;
+    public Figuras3D(int lados, String nombres, int ncaras, double arista){
+        super(lados, nombres);
+        this.ncaras=ncaras;
+        this.arista=arista;
+    }
+}
