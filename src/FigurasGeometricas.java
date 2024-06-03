@@ -35,3 +35,51 @@ class Figuras3D extends FigurasGeometricas{
         }
     }
 }
+
+class Figuras2D extends FigurasGeometricas{
+    public double area;
+    public double perimetro;
+    public Figuras2D(int lados, String nombres, double area, double perimetro){
+        super(lados, nombres);
+        this.area = area;
+        this.perimetro = perimetro;
+    }
+
+    @Override
+    public void mostrar_datos() {
+        super.mostrar_datos();
+        System.out.println("Area: "+ area);
+        System.out.println("Perimetro: "+perimetro);
+    }
+    public double calcula_area(double area) {
+        return area;
+    }
+
+    public double calcula_perimetro(double perimetro){
+        return perimetro;
+    }
+}
+
+class irregulares extends Figuras2D{
+    public String verficiar;
+    public irregulares(int lados, String nombres, double area, double perimetro, String verficiar){
+        super(lados, nombres, area, perimetro);
+        this.verficiar = verficiar;
+    }
+    public void Verficiar_irregular(){
+        if ((verficiar == "Si") || (verficiar == "si") || (verficiar == "SI")){
+            System.out.println("Una figura geometrica irregular tiene sus lados de diferentes medidas");
+        }
+        else{
+            System.out.println("Verifique su informacion");
+            verficiar = "no";
+        }
+    }
+
+    @Override
+    public void mostrar_datos() {
+        super.mostrar_datos();
+        System.out.println("Figura irregular: "+ verficiar);
+
+    }
+}
